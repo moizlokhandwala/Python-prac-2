@@ -13,20 +13,25 @@ Template - Compute and print tens and ones digit of an integer in [0,100).
 # Digits function
 # Student should enter function on the next lines.
 def print_digits(digit) :
-    tensDigit = digit // 10
-    onesDigit= digit % 10
-    print ("The tens digit is "+str(tensDigit)+", and the ones digit is "+str(onesDigit))
-
+    
+    if(digit<0 or digit >= 100):
+        print("Error: Input is not a two-digit number.")
+    else:
+        tensDigit = digit // 10
+        onesDigit= digit % 10
+        print ("The tens digit is "+str(tensDigit)+", and the ones digit is "+str(onesDigit))
+    
     
 ###################################################
 # Tests
 # Student should not change this code.
     
-print_digits(42)
-print_digits(99)
-print_digits(5)
-print_digits(0)
-
+#print_digits(42)
+#print_digits(99)
+#print_digits(5)
+#print_digits(0)
+#print_digits(-4)
+#print_digits(100)
 
 ###################################################
 # Expected output
